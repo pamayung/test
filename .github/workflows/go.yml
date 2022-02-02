@@ -44,6 +44,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
+          echo ${{ secrets.HOST }}
           docker pull wildhan/test:latest
           docker rm -f app_test
           docker run --name app_test --restart unless-stopped \
