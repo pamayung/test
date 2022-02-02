@@ -47,6 +47,6 @@ jobs:
           echo ${{ secrets.HOST }}
           docker pull wildhan/test:latest
           docker rm -f app_test
-          docker run --name app_test --restart unless-stopped \
+          docker run --name app_test -p 1323:1323 --restart unless-stopped \
           -d wildhan/test:latest
 
