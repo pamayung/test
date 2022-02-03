@@ -22,5 +22,5 @@ func main() {
 }
 
 func hello(c echo.Context) error {
-	return c.JSON(http.StatusOK, "hello2")
+	return c.JSON(http.StatusOK, "hello")
 }
